@@ -1,0 +1,27 @@
+package GUI;
+
+import java.sql.*;
+
+
+public class DB_ConnectionTest {
+    public static void main(String[] args) throws ClassNotFoundException{
+        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+        // Create a variable for the connection string.
+        String connectionUrl = "jdbc:sqlserver://COT-CIS3365-02:1433;database=SakuraNailSalon;user=SakuraTest;password=Testing123!";
+
+        try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement()) {
+            String SQL = "SELECT TOP 10 * FROM Customer";
+            ResultSet rs = stmt.executeQuery(SQL);
+
+            // Iterate through the data in the result set and display it.
+            while (rs.next()) {
+                System.out.println(rs.getString("Cust_FirstName") + " " + rs.getString("Cust_LastName"));
+            }
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
