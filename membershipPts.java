@@ -35,8 +35,8 @@ public class membershipPts {
 
         @Override
         public String toString() {
-            return "Customer{" +
-                    ", Member name='" + memberName + '\'' +
+            return "Member{" +
+                    ", Name='" + memberName + '\'' +
                     ", Type ='" + memberType + '\'' +
                     ", Points='" + memberPts + '\'' +
                     '}';
