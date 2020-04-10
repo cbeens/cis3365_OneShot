@@ -12,7 +12,7 @@ public class membershipPts {
         public String getMemberPts() {
             return memberPts;
         }
-        public void setMemberPts(int id) {
+        public void setMemberPts(String memberPts) {
             this.memberPts = memberPts;
         }
 
