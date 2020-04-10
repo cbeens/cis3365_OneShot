@@ -1,19 +1,19 @@
 package GUI.Class;
 
-public class membershipPts {
+public class ActiveMember {
 
 
         private String memberName;
         private String memberType;
-        private String memberPts;
+        private String memberSince;
 
 
-        //getter and setter for member points
-        public String getMemberPts() {
-            return memberPts;
+        //getter and setter for member since
+        public String getMemberSince() {
+            return memberSince;
         }
-        public void setMemberPts(String memberPts) {
-            this.memberPts = memberPts;
+        public void setMemberSince(String since) {
+            this.memberSince = since;
         }
 
         //getter and setter for member name
@@ -38,16 +38,16 @@ public class membershipPts {
             return "Member{" +
                     ", Name='" + memberName + '\'' +
                     ", Type ='" + memberType + '\'' +
-                    ", Points='" + memberPts + '\'' +
+                    ", Visits='" + memberSince + '\'' +
                     '}';
         }
 
 
         //constructor...
-        public membershipPts(String name, String type, String points) {
+        public ActiveMember(String name, String type, String since) {
             this.memberName = name;
             this.memberType = type;
-            this.memberPts = points;
+            this.memberSince = since;
         }
 
 

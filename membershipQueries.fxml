@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="545.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.controllor.MembershipQueryController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="545.0" prefWidth="777.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TabPane prefHeight="545.0" prefWidth="777.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="Active Members">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="table_ActiveMembers" layoutX="330.0" layoutY="13.0" prefHeight="490.0" prefWidth="412.0">
+                                <columns>
+                                  <TableColumn fx:id="table_MemberName" prefWidth="161.0" text="Member Name" />
+                                  <TableColumn fx:id="table_MemberType" prefWidth="136.0" text="Member Type" />
+                                    <TableColumn fx:id="table_MemberSince" prefWidth="114.0" text="Member Since" />
+                                </columns>
+                              </TableView>
+                              <GridPane layoutX="63.0" layoutY="155.0" prefHeight="206.0" prefWidth="220.0">
+                                <columnConstraints>
+                                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="45.0" prefWidth="134.0" text="Active Members" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see all customers with active memberships." wrappingWidth="186.0" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Frequent Members">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="table_FrequentMembers" layoutX="329.0" layoutY="13.0" prefHeight="490.0" prefWidth="412.0">
+                                 <columns>
+                                    <TableColumn fx:id="table_FrequentMember" prefWidth="161.0" text="Member Name" />
+                                    <TableColumn fx:id="table_FrequentType" prefWidth="136.0" text="Member Type" />
+                                    <TableColumn fx:id="table_FrequentVisits" prefWidth="114.0" text="Total Visits" />
+                                 </columns>
+                              </TableView>
+                              <GridPane layoutX="51.0" layoutY="155.0" prefHeight="206.0" prefWidth="220.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="45.0" prefWidth="162.0" text="Member Frequency" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see how frequent members visit" wrappingWidth="186.0" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="New Members">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="79.0" layoutY="155.0" prefHeight="256.0" prefWidth="220.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="45.0" prefWidth="120.0" text="New Members" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see how many members have joined since the selected date" wrappingWidth="186.0" GridPane.rowIndex="1" />
+                                    <DatePicker fx:id="datePicker" GridPane.rowIndex="2" />
+                                    <Button fx:id="submitDate" mnemonicParsing="false" onAction="#submitDate" prefHeight="36.0" prefWidth="71.0" text="Okay" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                              <TableView fx:id="table_NewMembers" layoutX="389.0" layoutY="187.0" prefHeight="143.0" prefWidth="275.0">
+                                 <columns>
+                                    <TableColumn fx:id="table_NewMemberships" prefWidth="143.0" text="New Memberships" />
+                                    <TableColumn fx:id="table_MembershipsSince" prefWidth="132.0" text="Since" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Popular Membership">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="81.0" layoutY="155.0" prefHeight="206.0" prefWidth="220.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="45.0" prefWidth="173.0" text="Popular Membership" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see which membership types are most popular" wrappingWidth="186.0" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <TableView fx:id="table_PopularMember" layoutX="351.0" layoutY="13.0" prefHeight="490.0" prefWidth="412.0">
+                                 <columns>
+                                    <TableColumn fx:id="table_PopularType" prefWidth="161.0" text="Membership Type" />
+                                    <TableColumn fx:id="table_PopularCount" prefWidth="136.0" text="Member Count" />
+                                    <TableColumn fx:id="table_PopularVisits" prefWidth="114.0" text="Total Visits" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Member Count">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <GridPane layoutX="89.0" layoutY="155.0" prefHeight="206.0" prefWidth="220.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="45.0" prefWidth="173.0" text="Member Count" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Here you can see how many members are at each location" wrappingWidth="186.0" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <TableView fx:id="table_MemberCount" layoutX="389.0" layoutY="155.0" prefHeight="143.0" prefWidth="275.0">
+                                 <columns>
+                                    <TableColumn fx:id="table_MemberLocation" prefWidth="143.0" text="Location" />
+                                    <TableColumn fx:id="table_LocationCount" prefWidth="132.0" text="Member Count" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Membership Points">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="545.0" prefWidth="777.0">
+                                 <children>
+                                    <GridPane fx:id="" layoutX="66.0" layoutY="160.0" prefHeight="102.0" prefWidth="186.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="168.0" minWidth="10.0" prefWidth="61.0" />
+                                          <ColumnConstraints halignment="RIGHT" maxWidth="134.0" minWidth="0.0" prefWidth="88.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="53.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                        <children>
+                                            <RadioButton fx:id="lowScore" mnemonicParsing="false" prefHeight="17.0" prefWidth="147.0" toggleGroup="$points1" text="Bottom 5" GridPane.columnIndex="1">
+                                                <toggleGroup>
+                                                    <ToggleGroup fx:id="points1" />
+                                                </toggleGroup></RadioButton>
+                                            <RadioButton fx:id="above" mnemonicParsing="false" prefHeight="17.0" prefWidth="161.0" text="Above" toggleGroup="$points1" GridPane.rowIndex="1" />
+                                            <RadioButton fx:id="below" mnemonicParsing="false" prefHeight="17.0" prefWidth="163.0" text="Below" toggleGroup="$points1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                            <RadioButton fx:id="highScore" mnemonicParsing="false" prefHeight="17.0" prefWidth="102.0" selected="true" text="Top 5" toggleGroup="$points1" />
+                                        </children>
+                                    </GridPane>
+                                    <Label layoutX="78.0" layoutY="81.0" prefHeight="45.0" prefWidth="165.0" text="Membership Points">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="179.0" layoutY="207.0" />
+                                    <TableView fx:id="table_MemberInfo" layoutX="351.0" layoutY="14.0" prefHeight="489.0" prefWidth="412.0">
+                                       <columns>
+                                          <TableColumn fx:id="table_MemberName1" prefWidth="161.0" text="Member Name" />
+                                          <TableColumn fx:id="table_MemberType1" prefWidth="136.0" text="Member Type" />
+                                          <TableColumn fx:id="table_MemberPts" prefWidth="114.0" text="Total Points" />
+                                       </columns>
+                                    </TableView>
+                                    <GridPane layoutX="63.0" layoutY="273.0" prefHeight="37.0" prefWidth="193.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="137.0" />
+                                          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="150.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" />
+                                       </rowConstraints>
+                                       <children>
+                                          <TextField fx:id="input_value" prefHeight="25.0" prefWidth="108.0" GridPane.columnIndex="1" GridPane.hgrow="SOMETIMES" GridPane.vgrow="NEVER">
+                                             <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                             </padding>
+                                          </TextField>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Threshold" />
+                                       </children>
+                                    </GridPane>
+                                    <GridPane layoutX="64.0" layoutY="325.0" prefHeight="45.0" prefWidth="193.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="98.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="161.0" minWidth="10.0" prefWidth="26.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="95.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Button fx:id="clear" mnemonicParsing="false" onAction="#clear" prefHeight="40.0" prefWidth="93.0" text="Clear" GridPane.columnIndex="2" />
+                                          <Button fx:id="submit" alignment="CENTER" mnemonicParsing="false" onAction="#handleSubmit" prefHeight="40.0" prefWidth="96.0" text="Okay" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
